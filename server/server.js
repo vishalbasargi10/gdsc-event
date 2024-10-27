@@ -50,10 +50,7 @@ const authenticateToken = (req, res, next) => {
     next();
   });
 };
-app.get("/ping",(req,res)=>{
-  res.send("pong");
 
-}
 // Routes
 const eventRoutes = require("./routes/event");
 app.use("/api/events", eventRoutes); // No global authentication middleware
