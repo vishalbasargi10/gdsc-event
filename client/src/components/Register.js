@@ -150,10 +150,10 @@ const Register = () => {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <Select value={role} onChange={(e) => setRole(e.target.value)}>
-            <option value="user">User</option>
-            <option value="admin">Admin</option>
-          </Select>
+          // <Select value={role} onChange={(e) => setRole(e.target.value)}>
+          //   <option value="user">User</option>
+          //   <option value="admin">Admin</option>
+          // </Select>
           <Button type="submit" disabled={loading}>
             {loading ? "Registering..." : "Register"}
           </Button>
