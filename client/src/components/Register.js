@@ -107,7 +107,7 @@ const Register = () => {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/users", {
+      await axios.post("https://gdsc-event.onrender.com/api/users", {
         username: trimmedUsername,
         password: trimmedPassword,
         role,

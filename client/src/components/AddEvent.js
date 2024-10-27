@@ -121,7 +121,7 @@ const AddEvent = () => {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.post("http://localhost:5000/api/events", formData, {
+      await axios.post("https://gdsc-event.onrender.com/api/events", formData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       navigate("/"); // Redirect to the events list after adding

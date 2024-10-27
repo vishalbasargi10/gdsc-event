@@ -108,7 +108,7 @@ const EventDetail = () => {
     const fetchEventDetail = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get(`http://localhost:5000/api/events/${id}`, {
+        const response = await axios.get(`https://gdsc-event.onrender.com/api/events/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setEvent(response.data);

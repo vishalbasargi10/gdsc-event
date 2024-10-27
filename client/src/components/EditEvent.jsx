@@ -95,7 +95,7 @@ const EditEvent = () => {
     const fetchEvent = async () => {
       const token = localStorage.getItem("token");
       try {
-        const response = await axios.get(`http://localhost:5000/api/events/${eventId}`, {
+        const response = await axios.get(`https://gdsc-event.onrender.com/api/events/${eventId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         
@@ -138,7 +138,7 @@ const EditEvent = () => {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/events/${eventId}`,
+        `https://gdsc-event.onrender.com/api/events/${eventId}`,
         eventData,
         {
           headers: { Authorization: `Bearer ${token}` },

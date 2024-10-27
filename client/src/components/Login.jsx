@@ -88,7 +88,7 @@ const Login = () => {
     const trimmedPassword = password.trim();
 
     try {
-      const response = await axios.post("http://localhost:5000/api/login", {
+      const response = await axios.post("https://gdsc-event.onrender.com/api/login", {
         username: trimmedUsername,
         password: trimmedPassword,
       });

@@ -175,7 +175,7 @@ const EventsList = () => {
     const fetchEvents = async () => {
       const token = localStorage.getItem("token");
       try {
-        const response = await axios.get("http://localhost:5000/api/events", {
+        const response = await axios.get("https://gdsc-event.onrender.com/api/events", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setEvents(response.data);
@@ -191,7 +191,7 @@ const EventsList = () => {
     const token = localStorage.getItem("token");
     try {
       await axios.post(
-        `http://localhost:5000/api/events/${eventId}/register`,
+        `https://gdsc-event.onrender.com/api/events/${eventId}/register`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -205,7 +205,7 @@ const EventsList = () => {
   const handleDelete = async (eventId) => {
     const token = localStorage.getItem("token");
     try {
-      await axios.delete(`http://localhost:5000/api/events/${eventId}`, {
+      await axios.delete(`https://gdsc-event.onrender.com/api/events/${eventId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setEvents(events.filter(event => event._id !== eventId));
